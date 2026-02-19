@@ -10,10 +10,39 @@ fetch('https://jsonplaceholder.typicode.com/users/')
   .then(users => {
       // YOUR CODE STARTS HERE
       console.log("--- Processed Users ---");
+      const result = users
       // 1. Filter even IDs
+        .filter(users => users.id % 2 === 0)
       // 2. Map to clean objects {id, name, city}
+        .map(users => {
+            return {
+                id: users.id,
+                name: users.name,
+                city: users.address.city,
+            }
+        });
       // 3. Add Guest User at the start using Spread (...)
+        const u = {
+            id: 0,
+            name: "Guest User",
+            city: "Castelldefels",
+        };
+        const result2 = [u, ...result];
+      
+      console.log(result2);
       
       console.log("--- Statistics ---");
       // 4. Reduce to count total characters in names
-  });
+      const result3 = users.reduce((total, users) => total + users.name.length, 0);
+      const result4 = result2.reduce((total, result2) => total + result2.name.length, 0);
+      
+      console.log("Full list count: ", result3);
+      console.log("Modified list count: ", result4);
+    });
+
+// EJEMPLO
+// const combined = ages 
+//   .map(age => age *2)
+//   .filter(age => age >= 40)
+//   .sort((a, b) => a - b)
+//   .reduce((a, b) => a + b, 0);
