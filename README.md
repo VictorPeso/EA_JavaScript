@@ -54,6 +54,7 @@ Dins del projecte s’inclou un vídeo explicatiu on es detalla l'exercici reali
 ```
 .
 ├── exercise.js
+├── explicacio.mp4
 └── README.md
 ```
 
