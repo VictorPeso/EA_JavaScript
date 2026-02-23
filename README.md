@@ -39,6 +39,7 @@ Calcular el **nombre total de caràcters** de tots els `name` combinats utilitza
 Dins del projecte s’inclou un vídeo explicatiu on es detalla l'exercici realitzat.
 
 👉 `explicacio.mp4`
+👉 [YouTube](https://youtu.be/CElE6n0bWms)
 
 ---
 
